@@ -3,7 +3,7 @@ import { ReactNode } from "react";
 
 interface INavLink {
   to: string;
-  children: ReactNode;
+  children?: ReactNode;
 }
 
 export const NavigationLink: React.FC<INavLink> = ({ to, children }) => {

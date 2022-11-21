@@ -1,3 +1,4 @@
+import { NavigationLink } from "../NavigationLink/NavLink";
 import { StyledNavigation } from "./Navigation.styled";
 
 interface INavigation {}

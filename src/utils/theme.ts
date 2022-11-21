@@ -2,7 +2,7 @@ const theme: object = {
   colors: {
     accent: {
       primary: "#330031",
-      secondery: "FFCCFD",
+      secondery: "#FFCCFD",
     },
     background: {
       primary: "background-color: #FFFFFF;",
