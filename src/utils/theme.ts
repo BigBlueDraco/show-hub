@@ -2,15 +2,20 @@ const theme: object = {
   colors: {
     accent: {
       primary: "#330031",
-      secondery: "FFCCFD",
+      secondery: "#FFCCFD",
+      primaryHover: "#FF66FA",
     },
     background: {
       primary: "background-color: #FFFFFF;",
       secondery: "background-color: #330031;",
+      primaryButton: "background-color: #330031;",
+      seconderyButton: "background-color: #000000;",
     },
     text: {
       primary: "color: #FFFFFF;",
       secondery: "color: #000000;",
+      primaryButton: "color: #FFFFFF;",
+      seconderyButton: "color: #FFCCFD;",
     },
     icons: {
       primary: "#FF66FA",

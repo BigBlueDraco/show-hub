@@ -5,7 +5,8 @@ import { Button } from "./components/Button/Button";
 function App() {
   return (
     <div className="App">
-      <Button type="submit" className="red"></Button>
+      <Button primary type="submit"></Button>
+      <Button type="submit"></Button>
     </div>
   );
 }

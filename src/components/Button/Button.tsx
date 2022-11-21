@@ -1,4 +1,5 @@
 import { ReactNode } from "react";
+import { StyledButton } from "./Button.styled";
 
 export interface IButton {
   active?: string;
@@ -12,5 +13,5 @@ export const Button: React.FC<IButton> = ({
   children = "default btn",
   ...attrs
 }) => {
-  return <button {...attrs}>{children}</button>;
+  return <StyledButton {...attrs}>{children}</StyledButton>;
 };
