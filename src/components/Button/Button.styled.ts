@@ -8,18 +8,16 @@ export const StyledButton = styled("button")<IStyledButton>`
   min-height: 60px;
   border-radius: 35px;
   border-color: transparent;
-  // font-size: 2px;
-  // &:hover {
-  //   transform: scale(1.05);
-  // }
   transition: transform 2s;
-  transition: box-shadow transform background 1s;
   &:hover,
   &:focus {
-    // border-color: red;
     transform: scale(1.1);
-    // color: #fff;
-    // box-shadow: 0 0 20px 5px ${(p) => p.theme.colors.accent.primaryHover};
+    box-shadow: 0px 3px 5px 0px
+      ${({
+        theme: {
+          colors: { accent },
+        },
+      }) => accent.primaryHover};
   }
   ${({ theme: { colors }, primary }) =>
     primary
