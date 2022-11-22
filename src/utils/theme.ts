@@ -12,6 +12,8 @@ const theme: object = {
       seconderyButton: "background-color: #000000;",
     },
     text: {
+      primaryTitle: "color: #330031;",
+      seconderyTitle: "color: #FFFFFF;",
       primary: "color: #FFFFFF;",
       secondery: "color: #000000;",
       primaryButton: "color: #FFFFFF;",

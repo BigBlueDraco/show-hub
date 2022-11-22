@@ -3,7 +3,7 @@ import { StyledButton } from "./Button.styled";
 
 export interface IButton {
   active?: string;
-  type: any;
+  type?: any;
   children?: ReactNode;
   [attrs: string]: any;
 }
