@@ -4,7 +4,7 @@ import "./index.css";
 import App from "./App";
 import { ThemeProvider } from "styled-components";
 import { theme } from "./utils/theme";
-import { BrowserRouter, Router } from "react-router-dom";
+import { BrowserRouter } from "react-router-dom";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement

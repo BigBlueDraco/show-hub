@@ -7,4 +7,7 @@ export const StyledHeader = styled("header")<IStyledHeader>`
   align-items: baseline;
   padding: 0px;
   gap: 114px;
+
+  padding-top: 32px;
+  padding-bottom: 64px;
 `;
