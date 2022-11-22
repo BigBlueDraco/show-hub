@@ -4,6 +4,7 @@ import "./index.css";
 import App from "./App";
 import { ThemeProvider } from "styled-components";
 import { theme } from "./utils/theme";
+import { GlobalStyle } from "./utils/GlobalStyles";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
@@ -11,6 +12,7 @@ const root = ReactDOM.createRoot(
 root.render(
   <ThemeProvider theme={theme}>
     <React.StrictMode>
+      <GlobalStyle />
       <App />
     </React.StrictMode>
   </ThemeProvider>
