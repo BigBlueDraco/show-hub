@@ -1,12 +1,13 @@
 import { Container } from "../../utils/Container";
 import {
+  StyledHeroButtonWraaper,
   StyledHeroDisc,
-  StyledHeroImg,
   StyledHeroSubTitle,
   StyledHeroTextWraper,
   StyledHeroTitle,
   StyledHeroWraper,
 } from "./Hero.styled";
+import { Button } from "../Button/Button";
 interface IHero {}
 
 export const Hero: React.FC<IHero> = () => {
@@ -25,6 +26,9 @@ export const Hero: React.FC<IHero> = () => {
             volutpat. Ut wisi enimad minim veniam, quis nostrud exerci
           </StyledHeroDisc>
         </StyledHeroTextWraper>
+        <StyledHeroButtonWraaper>
+          <Button>GetStarted</Button>
+        </StyledHeroButtonWraaper>
       </StyledHeroWraper>
     </Container>
   );

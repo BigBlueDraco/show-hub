@@ -41,12 +41,16 @@ export const StyledHeroSubTitle = styled("p")`
 export const StyledHeroDisc = styled("p")`
   margin-top: 64px;
   padding-left: 36px;
-  //   max-width: 700px;
   font-weight: 700;
   font-size: 20px;
   line-height: 1.5em;
 
   letter-spacing: 0.015em;
+`;
+export const StyledHeroButtonWraaper = styled("div")`
+  display: flex;
+  justify-content: center;
+  margin-top: 32px;
 `;
 
 export const StyledHeroImg = styled("img")``;
