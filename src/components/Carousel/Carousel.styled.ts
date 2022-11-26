@@ -1,14 +1,13 @@
 import styled from "styled-components";
 
-const Window = styled("div")`
-  height: 100%;
-  width: 100%;
+export const StyledWindow = styled("div")`
+  height: 200px;
+  width: 450px;
+  overflow: hidden;
+  // background: blue;
 `;
 
-const AllItemsContainer = styled("div")`
+export const StyledAllItemsContainer = styled("div")`
   height: 100%;
   display: flex;
-
-  //   max-width: 100%;
-  //   min-width: 100%;
 `;

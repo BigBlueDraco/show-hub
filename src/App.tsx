@@ -10,8 +10,8 @@ function App() {
       <Hero />
       <Carousel>
         <div>red</div>
-        <div>blue</div>
-        <div>green</div>
+        <div style={{ background: "blue" }}>blue</div>
+        <div style={{ background: "green" }}>green</div>
       </Carousel>
     </div>
   );
