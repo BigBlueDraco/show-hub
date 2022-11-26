@@ -10,8 +10,14 @@ function App() {
       <Hero />
       <Carousel>
         <div>red</div>
-        <div style={{ background: "blue" }}>blue</div>
-        <div style={{ background: "green" }}>green</div>
+        <div>blue</div>
+        <div>green</div>
+        <div>green1</div>
+        <div>green2</div>
+        <div>green3</div>
+        <div>green4</div>
+        <div>green5</div>
+        <div>green6</div>
       </Carousel>
     </div>
   );
