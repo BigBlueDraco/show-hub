@@ -9,6 +9,7 @@ import { AiOutlineArrowLeft, AiOutlineArrowRight } from "react-icons/ai";
 import {
   StyledAllItemsContainer,
   StyledCarouselWraper,
+  StyledCaruselButton,
   StyledLastItem,
   StyledWindow,
 } from "./Carousel.styled";
@@ -16,35 +17,28 @@ import {
 interface ICarousel {
   children?: ReactNode;
   ItemsPerPage?: number;
+  width?: string;
+  height?: string;
 }
-const PAGE_WIGHT: number = 33;
+const PAGE_WIDTH: number = 33;
 export const Carousel: React.FC<ICarousel> = ({
   children,
   ItemsPerPage = 1,
+  width = "",
+  height = "",
 }) => {
   const [pages, setPages] = useState<any>([]);
   const [offset, setOffset] = useState<number>(0);
-  const pageWight = 100 / ItemsPerPage;
+  const pagewidth = 100 / ItemsPerPage;
 
   useEffect(() => {
-    // setPages([
-    //   Children.map(children, (child) => {
-    //     return cloneElement(child as React.ReactElement<any>, {
-    //       style: {
-    //         height: "100%",
-    //         maxWidth: `${PAGE_WIGHT}%`,
-    //         minWidth: `${PAGE_WIGHT}%`,
-    //       },
-    //     });
-    //   }),
-    // ]);
     setPages(() => {
       const res = Children.map(children, (child) => {
         return cloneElement(child as React.ReactElement<any>, {
           style: {
             height: "100%",
-            maxWidth: `${pageWight}%`,
-            minWidth: `${pageWight}%`,
+            maxWidth: `${pagewidth}%`,
+            minWidth: `${pagewidth}%`,
           },
         });
       });
@@ -59,20 +53,17 @@ export const Carousel: React.FC<ICarousel> = ({
   };
   const handleRightArrowClick = (e: React.MouseEvent<HTMLElement>) => {
     setOffset((prevState) => {
-      const maxOffset: number = -pageWight * pages.length + 100;
-      console.log("Offset" + Math.max(prevState - 100, maxOffset));
-      console.log("MaxIffset" + maxOffset);
+      const maxOffset: number = -pagewidth * pages.length + 100;
       return Math.max(prevState - 100, maxOffset);
     });
   };
 
   return (
     <>
-      Carousel
-      <StyledCarouselWraper>
-        <button onClick={handleLeftArrowClick}>
+      <StyledCarouselWraper width={width} height={height}>
+        <StyledCaruselButton primary left onClick={handleLeftArrowClick}>
           <AiOutlineArrowLeft />
-        </button>
+        </StyledCaruselButton>
         <StyledWindow>
           <StyledAllItemsContainer
             style={{ transform: `translateX(${offset}%)` }}
@@ -80,9 +71,9 @@ export const Carousel: React.FC<ICarousel> = ({
             {pages}
           </StyledAllItemsContainer>
         </StyledWindow>
-        <button onClick={handleRightArrowClick}>
+        <StyledCaruselButton primary right onClick={handleRightArrowClick}>
           <AiOutlineArrowRight />
-        </button>
+        </StyledCaruselButton>
       </StyledCarouselWraper>
     </>
   );
