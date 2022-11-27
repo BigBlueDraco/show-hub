@@ -29,7 +29,7 @@ export const StyledLastItem = styled("div")`
 `;
 
 export const StyledCaruselButton = styled(Button)`
-  height: 100%;
+  min-height: 100%;
   min-width: 48px;
   ${(p) =>
     p.left && "border-top-right-radius: 0px; border-bottom-right-radius: 0px;"}
