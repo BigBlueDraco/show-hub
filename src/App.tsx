@@ -10,7 +10,7 @@ function App() {
       <Header></Header>
       <Hero />
       <Container>
-        <Carousel ItemsPerPage={2}>
+        <Carousel ItemsPerPage={2} height="300px">
           <div>red</div>
           <div>blue</div>
           <div>green</div>
