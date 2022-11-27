@@ -9,6 +9,7 @@ export const StyledButton = styled("button")<IStyledButton>`
   border-radius: 35px;
   border-color: transparent;
   transition: transform 2s;
+  cursor: pointer;
   &:hover,
   &:focus {
     transform: scale(1.1);
