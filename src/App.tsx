@@ -2,6 +2,7 @@ import "./App.css";
 import { Carousel } from "./components/Carousel/Carousel";
 import { Header } from "./components/Header/Header";
 import { Hero } from "./components/Hero/Hero";
+import { Section } from "./components/Section/Section";
 import { Container } from "./utils/Container";
 
 function App() {
@@ -9,8 +10,9 @@ function App() {
     <div className="App">
       <Header></Header>
       <Hero />
+      <Section></Section>
       <Container>
-        <Carousel ItemsPerPage={2} height="300px">
+        {/* <Carousel ItemsPerPage={2} height="300px">
           <div>red</div>
           <div>blue</div>
           <div>green</div>
@@ -21,7 +23,7 @@ function App() {
           <div>green5</div>
           <div>green6</div>
           <div>green7</div>
-        </Carousel>
+        </Carousel> */}
       </Container>
     </div>
   );
