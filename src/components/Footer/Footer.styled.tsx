@@ -10,7 +10,7 @@ export const StyledColumn = styled("div")`
 display flex;
 flex-direction: column;
 flex-basis: 25%;
-gap: 20px;`;
+gap: 48px;`;
 
 export const StyledFooterWraper = styled("div")`
   display: flex;
@@ -26,4 +26,15 @@ export const StyledDecorator = styled("div")`
 export const StyledContactsList = styled("ul")`
   display: flex;
   flex-direction: column;
+  gap: 32px;
+`;
+
+export const StyledContactsListItem = styled("li")`
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  & svg {
+    width: 30px;
+    height: 30px;
+  }
 `;

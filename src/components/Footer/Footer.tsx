@@ -5,9 +5,11 @@ import {
   StyledFooterWraper,
   StyledDecorator,
   StyledContactsList,
+  StyledContactsListItem,
 } from "./Footer.styled";
 
 import { BsGithub } from "react-icons/bs";
+import { MdMail } from "react-icons/md";
 import { FaLinkedinIn, FaTelegramPlane, FaMapMarkerAlt } from "react-icons/fa";
 
 interface IFooter {}
@@ -17,29 +19,56 @@ export const Footer: React.FC<IFooter> = () => {
       <Container>
         <StyledFooterWraper>
           <StyledColumn>
-            <h1>title</h1>
-            <div>Some info</div>
+            Contacts
             <StyledContactsList>
-              <li>
+              <StyledContactsListItem>
                 <BsGithub />
                 GitHub
-              </li>
-              <li>
+              </StyledContactsListItem>
+              <StyledContactsListItem>
                 <FaLinkedinIn />
                 linkedin
-              </li>
-              <li>
+              </StyledContactsListItem>
+              <StyledContactsListItem>
                 <FaTelegramPlane />
-                linkedin
-              </li>
-              <li>
+                Telegram
+              </StyledContactsListItem>
+              <StyledContactsListItem>
+                <MdMail />
+                Mail
+              </StyledContactsListItem>
+              <StyledContactsListItem>
                 <FaMapMarkerAlt />
-                linkedin
-              </li>
+                Map
+              </StyledContactsListItem>
             </StyledContactsList>
           </StyledColumn>
           <StyledDecorator />
-          <StyledColumn>laflalsfklaklf2</StyledColumn>
+          <StyledColumn>
+            My tech skils
+            <StyledContactsList>
+              <StyledContactsListItem>
+                <BsGithub />
+                GitHub
+              </StyledContactsListItem>
+              <StyledContactsListItem>
+                <FaLinkedinIn />
+                linkedin
+              </StyledContactsListItem>
+              <StyledContactsListItem>
+                <FaTelegramPlane />
+                Telegram
+              </StyledContactsListItem>
+              <StyledContactsListItem>
+                <MdMail />
+                Mail
+              </StyledContactsListItem>
+              <StyledContactsListItem>
+                <FaMapMarkerAlt />
+                Map
+              </StyledContactsListItem>
+            </StyledContactsList>
+          </StyledColumn>
           <StyledDecorator />
           <StyledColumn>lasfkaksflaskflas</StyledColumn>
         </StyledFooterWraper>
