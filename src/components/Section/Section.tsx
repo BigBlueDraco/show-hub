@@ -16,7 +16,7 @@ export const Section: React.FC<ISection> = ({ children }) => {
           <StyledSectionTitle>Title</StyledSectionTitle>
           <StyledSectionDecor />
         </StyledSectionWraper>
-        {children}{" "}
+        {children}
       </Container>
     </section>
   );

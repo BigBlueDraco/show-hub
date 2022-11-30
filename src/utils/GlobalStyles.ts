@@ -47,6 +47,7 @@ img {
 address {
     font-style: normal;
 }
+
 `;
 
 export const GlobalStyle = createGlobalStyle<IGlobalStyle>`

@@ -12,8 +12,7 @@ function App() {
     <div className="App">
       <Header></Header>
       <Hero />
-      <Section></Section>
-      <Container>
+      <Section>
         <Carousel ItemsPerPage={4} height="100%">
           <MovieCard imgUrl="" movieName="1" />
           <MovieCard imgUrl="" movieName="2" />
@@ -35,7 +34,7 @@ function App() {
           <MovieCard imgUrl="" movieName="19" />
           <MovieCard imgUrl="" movieName="20" />
         </Carousel>
-      </Container>
+      </Section>
     </div>
   );
 }
