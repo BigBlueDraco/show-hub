@@ -5,7 +5,7 @@ interface IStyledButton {
 }
 export const StyledButton = styled("button")<IStyledButton>`
   min-width: 230px;
-  min-height: 60px;
+  min-height: 50px;
   border-radius: 35px;
   border-color: transparent;
   transition: transform 2s;
