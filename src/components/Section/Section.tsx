@@ -10,15 +10,14 @@ interface ISection {
 }
 export const Section: React.FC<ISection> = ({ children }) => {
   return (
-    <Container>
-      <section>
+    <section>
+      <Container>
         <StyledSectionWraper>
           <StyledSectionTitle>Title</StyledSectionTitle>
           <StyledSectionDecor />
         </StyledSectionWraper>
-
-        {children}
-      </section>
-    </Container>
+        {children}{" "}
+      </Container>
+    </section>
   );
 };

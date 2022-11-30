@@ -8,9 +8,11 @@ export const StyledSectionDecor = styled("div")`
 export const StyledSectionTitle = styled("h2")`
   position: absolute;
   top: -0.55em;
-  left: 2em;
+  left: 3em;
+  z-index: 1;
+
+  padding: 0px 10px;
   background: white;
-  z-index: 2;
 `;
 export const StyledSectionWraper = styled("div")`
   position: relative;
