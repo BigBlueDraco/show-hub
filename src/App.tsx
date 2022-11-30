@@ -6,6 +6,7 @@ import { Section } from "./components/Section/Section";
 import { MovieCard } from "./components/MovieCard/MovieCard";
 
 import { Container } from "./utils/Container";
+import { Footer } from "./components/Footer/Footer";
 
 function App() {
   return (
@@ -36,6 +37,7 @@ function App() {
           <MovieCard imgUrl="" movieName="20" />
         </Carousel>
       </Container>
+      <Footer />
     </div>
   );
 }
