@@ -28,6 +28,12 @@ const theme: object = {
       primary: "border: solid 1px #000000;",
     },
   },
+  paddings: {
+    section: {
+      top: "padding-top: 128px;",
+      bot: "padding-bottom: 128px;",
+    },
+  },
 };
 
 export { theme };

@@ -2,9 +2,12 @@ import { Carousel } from "../Carousel/Carousel";
 import { MovieCard } from "../MovieCard/MovieCard";
 import { Section } from "../Section/Section";
 
-export const CarouselSection = () => {
+interface ICarouselSection {
+  last?: boolean;
+}
+export const CarouselSection: React.FC<ICarouselSection> = ({ last }) => {
   return (
-    <Section>
+    <Section last={last}>
       <Carousel ItemsPerPage={4} height="100%">
         <MovieCard imgUrl="" movieName="1" />
         <MovieCard imgUrl="" movieName="2" />

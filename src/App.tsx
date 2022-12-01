@@ -15,6 +15,8 @@ function App() {
       <Header></Header>
       <Hero />
       <CarouselSection />
+      <CarouselSection />
+      <CarouselSection last />
       <Footer />
     </div>
   );
