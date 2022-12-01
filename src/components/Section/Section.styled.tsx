@@ -1,5 +1,13 @@
 import styled from "styled-components";
 
+interface IStyledSection {
+  last?: boolean;
+}
+export const StyledSection = styled("section")<IStyledSection>`
+  // padding-top: 128px;
+  ${(p) => p.theme.paddings.section.top}
+  ${(p) => p.last && p.theme.paddings.section.bot};
+`;
 export const StyledSectionDecor = styled("div")`
   height: 1px;
   background: #000000;
@@ -16,5 +24,5 @@ export const StyledSectionTitle = styled("h2")`
 `;
 export const StyledSectionWraper = styled("div")`
   position: relative;
-  margin: 56px 0px;
+  margin-bottom: 56px;
 `;

@@ -3,14 +3,16 @@ import {
   StyledSectionDecor,
   StyledSectionTitle,
   StyledSectionWraper,
+  StyledSection,
 } from "./Section.styled";
 
 interface ISection {
   children?: React.ReactNode;
+  last?: boolean;
 }
-export const Section: React.FC<ISection> = ({ children }) => {
+export const Section: React.FC<ISection> = ({ children, last = false }) => {
   return (
-    <section>
+    <StyledSection last={last}>
       <Container>
         <StyledSectionWraper>
           <StyledSectionTitle>Title</StyledSectionTitle>
@@ -18,6 +20,6 @@ export const Section: React.FC<ISection> = ({ children }) => {
         </StyledSectionWraper>
         {children}
       </Container>
-    </section>
+    </StyledSection>
   );
 };
