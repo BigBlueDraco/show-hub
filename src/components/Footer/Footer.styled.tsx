@@ -33,8 +33,16 @@ export const StyledContactsListItem = styled("li")`
   display: flex;
   gap: 24px;
   align-items: center;
+  font-size: 16px;
+  line-height: 19px;
   & svg {
     width: 30px;
     height: 30px;
   }
+`;
+
+export const StyledTittle = styled("p")`
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 27px;
 `;

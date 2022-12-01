@@ -6,6 +6,7 @@ import {
   StyledDecorator,
   StyledContactsList,
   StyledContactsListItem,
+  StyledTittle,
 } from "./Footer.styled";
 
 import { BsGithub } from "react-icons/bs";
@@ -19,7 +20,7 @@ export const Footer: React.FC<IFooter> = () => {
       <Container>
         <StyledFooterWraper>
           <StyledColumn>
-            Contacts
+            <StyledTittle>Contacts</StyledTittle>
             <StyledContactsList>
               <StyledContactsListItem>
                 <BsGithub />
@@ -45,7 +46,7 @@ export const Footer: React.FC<IFooter> = () => {
           </StyledColumn>
           <StyledDecorator />
           <StyledColumn>
-            My tech skils
+            <StyledTittle>My tech skils</StyledTittle>
             <StyledContactsList>
               <StyledContactsListItem>
                 <BsGithub />
@@ -70,7 +71,9 @@ export const Footer: React.FC<IFooter> = () => {
             </StyledContactsList>
           </StyledColumn>
           <StyledDecorator />
-          <StyledColumn>lasfkaksflaskflas</StyledColumn>
+          <StyledColumn>
+            <StyledTittle>About me</StyledTittle>
+          </StyledColumn>
         </StyledFooterWraper>
       </Container>
     </StyledFooter>
