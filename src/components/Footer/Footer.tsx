@@ -11,7 +11,15 @@ import {
 
 import { BsGithub } from "react-icons/bs";
 import { MdMail } from "react-icons/md";
-import { FaLinkedinIn, FaTelegramPlane, FaMapMarkerAlt } from "react-icons/fa";
+import { IoLogoJavascript } from "react-icons/io";
+import { SiRedux, SiTypescript } from "react-icons/si";
+import {
+  FaLinkedinIn,
+  FaTelegramPlane,
+  FaMapMarkerAlt,
+  FaReact,
+  FaDatabase,
+} from "react-icons/fa";
 
 interface IFooter {}
 export const Footer: React.FC<IFooter> = () => {
@@ -49,24 +57,24 @@ export const Footer: React.FC<IFooter> = () => {
             <StyledTittle>My tech skils</StyledTittle>
             <StyledContactsList>
               <StyledContactsListItem>
-                <BsGithub />
-                GitHub
+                <FaReact />
+                React
               </StyledContactsListItem>
               <StyledContactsListItem>
-                <FaLinkedinIn />
-                linkedin
+                <IoLogoJavascript />
+                JavaScript
               </StyledContactsListItem>
               <StyledContactsListItem>
-                <FaTelegramPlane />
-                Telegram
+                <SiRedux />
+                Redux
               </StyledContactsListItem>
               <StyledContactsListItem>
-                <MdMail />
-                Mail
+                <SiTypescript />
+                TypeScript
               </StyledContactsListItem>
               <StyledContactsListItem>
-                <FaMapMarkerAlt />
-                Map
+                <FaDatabase />
+                SQL
               </StyledContactsListItem>
             </StyledContactsList>
           </StyledColumn>
