@@ -24,5 +24,5 @@ export const StyledSectionTitle = styled("h2")`
 `;
 export const StyledSectionWraper = styled("div")`
   position: relative;
-  margin-bottom: 48px;
+  margin-bottom: 56px;
 `;
