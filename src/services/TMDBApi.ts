@@ -19,6 +19,6 @@ export class TMDBApi {
         api_key: this.API_KEY,
       },
     });
-    return await res;
+    return await res.data;
   }
 }

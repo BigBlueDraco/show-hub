@@ -9,13 +9,18 @@ import {
 interface ISection {
   children?: React.ReactNode;
   last?: boolean;
+  title?: string;
 }
-export const Section: React.FC<ISection> = ({ children, last = false }) => {
+export const Section: React.FC<ISection> = ({
+  children,
+  title,
+  last = false,
+}) => {
   return (
     <StyledSection last={last}>
       <Container>
         <StyledSectionWraper>
-          <StyledSectionTitle>Title</StyledSectionTitle>
+          <StyledSectionTitle>{title}</StyledSectionTitle>
           <StyledSectionDecor />
         </StyledSectionWraper>
         {children}
