@@ -34,7 +34,6 @@ export const Carousel: React.FC<ICarousel> = ({
   useEffect(() => {
     setPages(() => {
       const res = Children.map(children, (child) => {
-        console.log(child);
         return cloneElement(child as React.ReactElement<any>, {
           style: {
             height: "100%",

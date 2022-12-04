@@ -21,6 +21,7 @@ export const CarouselSection: React.FC<ICarouselSection> = ({
               key={element.id}
               imgUrl={element.poster_path}
               movieName={element.title || element.name}
+              movieId={element.id}
             />
           );
         })}
