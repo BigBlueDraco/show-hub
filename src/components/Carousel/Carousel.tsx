@@ -10,7 +10,6 @@ import {
   StyledAllItemsContainer,
   StyledCarouselWraper,
   StyledCaruselButton,
-  StyledLastItem,
   StyledWindow,
 } from "./Carousel.styled";
 
@@ -20,7 +19,6 @@ interface ICarousel {
   width?: string;
   height?: string;
 }
-const PAGE_WIDTH: number = 33;
 export const Carousel: React.FC<ICarousel> = ({
   children,
   ItemsPerPage = 1,
@@ -44,7 +42,7 @@ export const Carousel: React.FC<ICarousel> = ({
       });
       return res;
     });
-  }, [children]);
+  }, [children, pagewidth]);
 
   const handleLeftArrowClick = (e: React.MouseEvent<HTMLElement>) => {
     setOffset((prevState) => {

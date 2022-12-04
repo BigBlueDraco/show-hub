@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { Button } from "../Button/Button";
 import { StyledLink } from "../link/link.styled";
 export const StyledMovieCardWraper = styled("div")`
   //   min-width: 240px;
