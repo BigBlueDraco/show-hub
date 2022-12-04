@@ -11,4 +11,5 @@ export const StyledMovieCardImg = styled("img")`
 `;
 export const StyledMovieCardButton = styled(Button)`
   width: 100%;
+  // max-width: 256px;
 `;

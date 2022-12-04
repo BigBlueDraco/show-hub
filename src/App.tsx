@@ -8,15 +8,23 @@ import { MovieCard } from "./components/MovieCard/MovieCard";
 import { Container } from "./utils/Container";
 import { Footer } from "./components/Footer/Footer";
 import { CarouselSection } from "./components/CarouselSection/CarouselSection";
-
+import { TMDBApi } from "./services/TMDBApi";
+import { useEffect, useState } from "react";
 function App() {
+  const [movies, setMovies] = useState();
+  useEffect(() => {
+    const feath = async () => {
+      const api = new TMDBApi();
+      const data = await api.featheTopRateMovies();
+      setMovies(data.results);
+    };
+    feath();
+  }, []);
   return (
     <div className="App">
       <Header></Header>
       <Hero />
-      <CarouselSection />
-      <CarouselSection />
-      <CarouselSection last />
+      <CarouselSection elements={movies} last />
       <Footer />
     </div>
   );

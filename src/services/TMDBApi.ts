@@ -10,7 +10,15 @@ export class TMDBApi {
         api_key: this.API_KEY,
       },
     });
-    console.log(res);
+    return await res.data;
+  }
+  public async featheTopRateTVs() {
+    const res = await axios.get(`/tv/top_rated`, {
+      baseURL: this.BASE_URL,
+      params: {
+        api_key: this.API_KEY,
+      },
+    });
     return await res;
   }
 }
