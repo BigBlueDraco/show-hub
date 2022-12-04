@@ -20,7 +20,7 @@ export const MovieCard: React.FC<IMovieCard> = ({
   return (
     <StyledMovieCardWraper {...attrs}>
       <StyledMovieCardImg
-        src={`https://image.tmdb.org/t/p/original/${imgUrl}`}
+        src={`https://image.tmdb.org/t/p/w500${imgUrl}`}
         alt="Film poster"
       />
       <StyledMovieCardButton primary>{movieName}</StyledMovieCardButton>

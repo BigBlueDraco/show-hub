@@ -10,16 +10,18 @@ export const CarouselSection: React.FC<ICarouselSection> = ({
   last,
   elements = [],
 }) => {
-  console.log(elements[0]);
   return (
     <Section last={last}>
       <Carousel ItemsPerPage={4} height="100%">
         {elements.map((element) => {
           return (
-            <MovieCard key={element.id} imgUrl="" movieName={element.title} />
+            <MovieCard
+              key={element.id}
+              imgUrl={element.poster_path}
+              movieName={element.title}
+            />
           );
         })}
-        <MovieCard imgUrl="" movieName="2" />
       </Carousel>
     </Section>
   );

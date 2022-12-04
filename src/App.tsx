@@ -11,12 +11,12 @@ import { CarouselSection } from "./components/CarouselSection/CarouselSection";
 import { TMDBApi } from "./services/TMDBApi";
 import { useEffect, useState } from "react";
 function App() {
-  const [movies, setMovies] = useState();
+  const [topMoviesAllTheTime, setTopMoviesAllTheTime] = useState();
   useEffect(() => {
     const feath = async () => {
       const api = new TMDBApi();
       const data = await api.featheTopRateMovies();
-      setMovies(data.results);
+      setTopMoviesAllTheTime(data.results);
     };
     feath();
   }, []);
@@ -24,7 +24,7 @@ function App() {
     <div className="App">
       <Header></Header>
       <Hero />
-      <CarouselSection elements={movies} last />
+      <CarouselSection elements={topMoviesAllTheTime} last />
       <Footer />
     </div>
   );
