@@ -12,7 +12,7 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <ThemeProvider theme={theme}>
-    <BrowserRouter>
+    <BrowserRouter basename="/show-hub/">
       <React.StrictMode>
         <GlobalStyle />
         <App />
