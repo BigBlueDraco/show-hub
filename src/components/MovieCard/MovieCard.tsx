@@ -7,6 +7,7 @@ import {
 interface IMovieCard {
   imgUrl: string;
   movieName: string;
+  movieId: string;
   [attrs: string]: any;
 }
 
@@ -14,6 +15,7 @@ export const MovieCard: React.FC<IMovieCard> = ({
   children,
   imgUrl,
   movieName,
+  movieId,
   ...attrs
 }) => {
   return (
@@ -22,7 +24,9 @@ export const MovieCard: React.FC<IMovieCard> = ({
         src={`https://image.tmdb.org/t/p/w500${imgUrl}`}
         alt="Film poster"
       />
-      <StyledMovieCardButton primary>{movieName}</StyledMovieCardButton>
+      <StyledMovieCardButton to={`/${movieId}`} button primary>
+        {movieName}
+      </StyledMovieCardButton>
     </StyledMovieCardWraper>
   );
 };

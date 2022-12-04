@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { Button } from "../Button/Button";
+import { StyledLink } from "../link/link.styled";
 export const StyledMovieCardWraper = styled("div")`
   //   min-width: 240px;
   display: flex;
@@ -12,8 +13,13 @@ export const StyledMovieCardImg = styled("img")`
   width: 100%;
   height: 356px;
   border-radius: 35px;
+  &:hover {
+    cursor: zoom-in;
+    transform: scale(1.05);
+    position: reletive;
+  }
 `;
-export const StyledMovieCardButton = styled(Button)`
+export const StyledMovieCardButton = styled(StyledLink)`
   width: 100%;
   // max-width: 256px;
 `;

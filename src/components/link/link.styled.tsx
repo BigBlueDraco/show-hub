@@ -20,7 +20,7 @@ export const StyledLink = styled(Link)<IStyledLink>`
     align-items: center;  
     border-radius: 35px;
         border-color: transparent;
-        transition: transform 2s;
+        transition: transform 1s;
         cursor: pointer;
         min-width: 230px;
         min-height: 50px;
