@@ -1,4 +1,3 @@
-import { Button } from "../Button/Button";
 import {
   StyledMovieCardWraper,
   StyledMovieCardImg,
@@ -19,7 +18,10 @@ export const MovieCard: React.FC<IMovieCard> = ({
 }) => {
   return (
     <StyledMovieCardWraper {...attrs}>
-      <StyledMovieCardImg src={imgUrl} alt="Film poster" />
+      <StyledMovieCardImg
+        src={`https://image.tmdb.org/t/p/w500${imgUrl}`}
+        alt="Film poster"
+      />
       <StyledMovieCardButton primary>{movieName}</StyledMovieCardButton>
     </StyledMovieCardWraper>
   );

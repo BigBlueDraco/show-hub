@@ -45,7 +45,7 @@ export const Carousel: React.FC<ICarousel> = ({
       });
       return res;
     });
-  }, []);
+  }, [children]);
 
   const handleLeftArrowClick = (e: React.MouseEvent<HTMLElement>) => {
     setOffset((prevState) => {
