@@ -38,6 +38,7 @@ const theme: object = {
     mob: "@media screen and (min-width: 480px)",
     tablet: "@media screen and (min-width: 768px)",
     desk: "@media screen and (min-width: 1280px)",
+    onlyDesk: "@media screen and (max-width: 1280px)",
   },
 };
 

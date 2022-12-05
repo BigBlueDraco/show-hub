@@ -1,7 +1,8 @@
 import styled from "styled-components";
+import { BiMenu } from "react-icons/bi";
+import { Button } from "../Button/Button";
 
-interface IStyledHeader {}
-export const StyledHeader = styled("header")<IStyledHeader>`
+export const StyledHeader = styled("header")`
   display: flex;
   flex-direction: row;
   align-items: baseline;
@@ -11,7 +12,18 @@ export const StyledHeader = styled("header")<IStyledHeader>`
   padding-top: 32px;
   padding-bottom: 64px;
 
-  @media (min-width: 900px) {
-    // flex-direction: column;
-  }
+  ${({ theme: { media } }) =>
+    media.onlyDesk +
+    `{
+    justify-content: space-between;
+  }`}
+`;
+export const StyledHeaderMenuIcon = styled(BiMenu)`
+  width: 18px;
+  height: 18px;
+`;
+export const StyledHeaderButton = styled(Button)`
+  min-width: 0;
+  min-height: 0;
+  padding: 4px 6px;
 `;
