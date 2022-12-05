@@ -7,21 +7,17 @@ import {
   StyledHeaderButton,
   StyledHeaderMenuIcon,
 } from "./Header.styled";
-import { useMediaQuery } from "react-responsive";
-import { BiMenuAltRight } from "react-icons/bi";
-import { Button } from "../Button/Button";
+import { useMyMedia } from "../../hooks/useMedia";
 
 interface IHeader {}
 export const Header: React.FC<IHeader> = () => {
-  const isDesctop = useMediaQuery({
-    query: "(min-width: 1280px)",
-  });
+  const { isDesktop } = useMyMedia();
   return (
     <>
       <Container>
         <StyledHeader>
           <Logo />
-          {isDesctop ? (
+          {isDesktop ? (
             <>
               <Navigation />
               <SearcheBar />
