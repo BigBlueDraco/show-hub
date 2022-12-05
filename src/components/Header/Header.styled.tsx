@@ -10,4 +10,8 @@ export const StyledHeader = styled("header")<IStyledHeader>`
 
   padding-top: 32px;
   padding-bottom: 64px;
+
+  @media (min-width: 900px) {
+    // flex-direction: column;
+  }
 `;
