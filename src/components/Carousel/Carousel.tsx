@@ -27,7 +27,7 @@ export const Carousel: React.FC<ICarousel> = ({
 }) => {
   const [pages, setPages] = useState<any>([]);
   const [offset, setOffset] = useState<number>(0);
-  const pagewidth = 100 / ItemsPerPage;
+  const [pagewidth, setPageWidth] = useState<number>(100 / ItemsPerPage);
 
   useEffect(() => {
     setPages(() => {
@@ -55,6 +55,11 @@ export const Carousel: React.FC<ICarousel> = ({
       return Math.max(prevState - 100, maxOffset);
     });
   };
+
+  useEffect(() => {
+    setPageWidth(100 / ItemsPerPage);
+    setOffset(0);
+  }, [ItemsPerPage]);
 
   return (
     <>
