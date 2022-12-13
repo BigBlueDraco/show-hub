@@ -8,7 +8,7 @@ export const StyledMovieCardWraper = styled("div")`
   padding: 15px 30px;
 `;
 export const StyledMovieCardImg = styled("img")`
-  // min-width: 240px;
+  min-width: 240px;
   width: 100%;
   height: 356px;
   border-radius: 35px;
