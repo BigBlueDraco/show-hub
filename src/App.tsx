@@ -6,6 +6,7 @@ import { Footer } from "./components/Footer/Footer";
 import { CarouselSection } from "./components/CarouselSection/CarouselSection";
 import { TMDBApi } from "./services/TMDBApi";
 import { Route, Routes } from "react-router-dom";
+import { ModalWindowWraper } from "./components/ModalWindowWraper/ModalWindowWraper";
 
 function App() {
   const [topMoviesAllTheTime, setTopMoviesAllTheTime] = useState();
@@ -27,7 +28,6 @@ function App() {
           index
           element={
             <>
-              {" "}
               <Header></Header>
               <Hero />
               <CarouselSection
