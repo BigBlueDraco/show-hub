@@ -14,13 +14,24 @@ gap: 48px;`;
 
 export const StyledFooterWraper = styled("div")`
   display: flex;
-
+  gap: 20px;
+  flex-direction: column;
   justify-content: space-around;
+  ${({ theme: { media } }) =>
+    media.tablet +
+    `{
+      gap: 0px;
+    flex-direction: row;
+  }`}
 `;
 export const StyledDecorator = styled("div")`
   flex-basis: 1px;
-  width: 1px;
   background: #fff;
+  ${({ theme: { media } }) =>
+    media.tablet +
+    `{
+    width: 1px;
+}`}
 `;
 
 export const StyledContactsList = styled("ul")`
