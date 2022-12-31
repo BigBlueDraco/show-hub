@@ -31,6 +31,8 @@ export const StyledModalWindowWraper = styled("div")`
   ${({ theme: { media } }) =>
     media.tablet +
     `{
+      padding-top: 70px; 
+      padding-bottom: 70px; 
       border-radius: 20px;
       max-width: 548px;
       height: auto;

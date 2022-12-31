@@ -12,14 +12,16 @@ export const StyledSearcheBarIcon = styled(BiSearchAlt)<IStyledSeacheBarIcon>`
   flex-grow: 0;
 `;
 
-export const StyledSearcheBarWraper = styled("div")<IStyledSearcheBarWraper>`
+export const StyledSearcheBarWraper = styled("label")<IStyledSearcheBarWraper>`
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: 10px;
 
   box-sizing: border-box;
-  width: 360px;
+  // min-width: 300px;
+  width: 100%;
+  max-width: 360px;
   height: 45px;
 
   padding: 10px 20px;
