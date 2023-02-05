@@ -12,7 +12,7 @@ export const StyledHeader = styled("header")`
   gap: 114px;
 
   padding-top: 32px;
-  padding-bottom: 64px;
+  padding-bottom: 32px;
 
   ${({ theme: { media } }) =>
     media.onlyDesk +

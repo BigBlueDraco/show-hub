@@ -21,4 +21,24 @@ export class TMDBApi {
     });
     return await res.data;
   }
+  public async featheTVById(tv_id: string) {
+    const res = await axios.get(`/tv/${tv_id}`, {
+      baseURL: this.BASE_URL,
+      params: {
+        api_key: this.API_KEY,
+      },
+    });
+
+    return await res.data;
+  }
+  public async featheMovieById(movie_id: string) {
+    const res = await axios.get(`/movie/${movie_id}`, {
+      baseURL: this.BASE_URL,
+      params: {
+        api_key: this.API_KEY,
+      },
+    });
+
+    return await res.data;
+  }
 }
