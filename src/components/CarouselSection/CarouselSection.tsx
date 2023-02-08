@@ -8,11 +8,13 @@ interface ICarouselSection {
   last?: boolean;
   elements?: Array<any>;
   title?: string;
+  endpoint?: string;
 }
 export const CarouselSection: React.FC<ICarouselSection> = ({
   title,
   last,
   elements = [],
+  endpoint = "",
 }) => {
   const { isDesktop, isTablet, isMobile } = useMyMedia();
   const perPage: any = (isDesktop && 4) || (isTablet && 2) || 1;
@@ -27,6 +29,7 @@ export const CarouselSection: React.FC<ICarouselSection> = ({
                 imgUrl={element.poster_path}
                 movieName={element.title || element.name}
                 movieId={element.id}
+                endpoint={endpoint}
               />
             );
           })}
@@ -41,6 +44,7 @@ export const CarouselSection: React.FC<ICarouselSection> = ({
                   imgUrl={element.poster_path}
                   movieName={element.title || element.name}
                   movieId={element.id}
+                  endpoint={endpoint}
                 />
               </StyledListItem>
             );

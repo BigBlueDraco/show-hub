@@ -10,8 +10,8 @@ export const HomePage = () => {
   useEffect(() => {
     const feath = async () => {
       const api = new TMDBApi();
-      const topMovies = await api.featheTopRateMovies();
-      const topTVs = await api.featheTopRateTVs();
+      const topMovies = await api.feathTopRateMovies();
+      const topTVs = await api.feathTopRateTVs();
       setTopMoviesAllTheTime(topMovies.results);
       setTopTVsAllTheTime(topTVs.results);
     };
@@ -20,8 +20,17 @@ export const HomePage = () => {
   return (
     <>
       <Hero />
-      <CarouselSection title="Top Movies" elements={topMoviesAllTheTime} />
-      <CarouselSection title="Top TV shows" elements={topTVsAllTheTime} last />
+      <CarouselSection
+        title="Top Movies"
+        elements={topMoviesAllTheTime}
+        endpoint={"movie"}
+      />
+      <CarouselSection
+        title="Top TV shows"
+        elements={topTVsAllTheTime}
+        endpoint={"tv-shows"}
+        last
+      />
     </>
   );
 };

@@ -1,19 +1,17 @@
-import { TMDBApi } from "../../services/TMDBApi";
 import { Container } from "../../utils/Container";
-import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
-import { MoviePageBg, MoviePageWraper, MovieTitle } from "./MoviesPage.styled";
-import { Section } from "../../components/Section/Section";
+import {
+  MoviePageBg,
+  MoviePageWraper,
+  MovieTitle,
+  MovieImage,
+  MovieDisc,
+  MovieSubTitle,
+} from "./MoviesPage.styled";
+import { GenresList } from "../../components/GenersList/GenresList";
+import { useFetchDetails } from "../../hooks/useFetchDetiles";
 
 export const MoviePage = () => {
-  const api = new TMDBApi();
-  const [movie, setMovie] = useState<any>();
-  const { movieId } = useParams();
-
-  useEffect(() => {
-    api.featheMovieById(movieId || "238").then(setMovie);
-  }, [movieId]);
-  console.log(movie);
+  const movie = useFetchDetails();
   return (
     <>
       <MoviePageBg
@@ -22,18 +20,18 @@ export const MoviePage = () => {
         <Container>
           {movie && (
             <MoviePageWraper>
-              <img
+              <MovieImage
                 src={`https://image.tmdb.org/t/p/w500${movie?.poster_path}`}
                 alt=""
                 width="350px"
               />
-              <MovieTitle>{movie.title}</MovieTitle>
-              <p>{movie.overview}</p>
-              <p>{movie.vote_average}</p>
-              {movie.genres.map(({ name }: any) => (
-                <p>{name}</p>
-              ))}
-              <Section></Section>
+              <div>
+                <MovieTitle>{movie.title}</MovieTitle>
+                <p>User average: {movie.vote_average}</p>
+                <MovieDisc>{movie.overview}</MovieDisc>
+                <MovieSubTitle>Geners:</MovieSubTitle>
+                <GenresList genres={movie.genres} />
+              </div>
             </MoviePageWraper>
           )}
         </Container>

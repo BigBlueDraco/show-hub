@@ -3,7 +3,7 @@ export class TMDBApi {
   private BASE_URL = "https://api.themoviedb.org/3/";
   private API_KEY = "fd0a7baec7e1722e7549dfbeea65227f";
 
-  public async featheTopRateMovies() {
+  public async feathTopRateMovies() {
     const res = await axios.get(`movie/top_rated`, {
       baseURL: this.BASE_URL,
       params: {
@@ -12,7 +12,7 @@ export class TMDBApi {
     });
     return await res.data;
   }
-  public async featheTopRateTVs() {
+  public async feathTopRateTVs() {
     const res = await axios.get(`/tv/top_rated`, {
       baseURL: this.BASE_URL,
       params: {
@@ -21,7 +21,7 @@ export class TMDBApi {
     });
     return await res.data;
   }
-  public async featheTVById(tv_id: string) {
+  public async feathTVById(tv_id: string) {
     const res = await axios.get(`/tv/${tv_id}`, {
       baseURL: this.BASE_URL,
       params: {
@@ -31,7 +31,7 @@ export class TMDBApi {
 
     return await res.data;
   }
-  public async featheMovieById(movie_id: string) {
+  public async feathMovieById(movie_id: string) {
     const res = await axios.get(`/movie/${movie_id}`, {
       baseURL: this.BASE_URL,
       params: {
