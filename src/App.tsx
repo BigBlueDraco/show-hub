@@ -11,7 +11,10 @@ function App() {
           <Route index element={<HomePage />} />
         </Route>
         <Route path=":endpoint/" element={<Layout />}>
-          <Route path=":movieId" element={<MoviePage />} />
+          <Route path=":movieId" element={<MoviePage />}>
+            <Route path="cast" element={<>cast</>} />
+            <Route path="reviews" element={<>reviews</>} />
+          </Route>
         </Route>
       </Routes>
     </div>

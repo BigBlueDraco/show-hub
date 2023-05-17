@@ -10,12 +10,17 @@ export const MoviePageBg = styled("div")<IStyledMoviePageBg>`
   background-repeat: no-repeat;
   background-position: top;
   background-size: cover;
+  box-shadow: inset 0px 0px 300px 100px rgba(255, 204, 253, 1);
 `;
 export const MoviePageWraper = styled("div")`
   ${({ theme }) => theme.colors.background.primary}
   padding: 32px;
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
+  overflow: hidden;
+`;
+export const MoviePageInfo = styled("div")`
+  padding: 32px;
   overflow: hidden;
   display: flex;
   gap: 20px;
